@@ -53,16 +53,16 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avatar.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="mask-icon" href="/images/avatar.png?v=5.1.4" color="#222">
 
 
 
@@ -96,7 +96,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -342,21 +342,15 @@
 
       
         
-          
-            <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>Hexo博客NexT主题中是有目录的，只是在默认情况下没有开启，需要我们来手动开启。</p>
-<h1 id="二、修改样式文件custom-styl"><a href="#二、修改样式文件custom-styl" class="headerlink" title="二、修改样式文件custom.styl"></a>二、修改样式文件custom.styl</h1><p>文章目录样式文件custom.styl文件位于themes/next/source/css/_custom<br>打开后添加内容：</p>
-<h2 id="1-文章目录默认展开"><a href="#1-文章目录默认展开" class="headerlink" title="1.文章目录默认展开"></a>1.文章目录默认展开</h2><blockquote>
-<p>//文章目录默认展开<br>.post-toc .nav .nav-child { display: block; }</p>
-</blockquote>
-<h2 id="2-文章目录字体大小调整"><a href="#2-文章目录字体大小调整" class="headerlink" title="2.文章目录字体大小调整"></a>2.文章目录字体大小调整</h2><blockquote>
-<p>.post-toc ol {<br>   font-size : 13px;<br>  } </p>
-</blockquote>
-<h1 id="三、修改主题配置文件"><a href="#三、修改主题配置文件" class="headerlink" title="三、修改主题配置文件"></a>三、修改主题配置文件</h1><p> 主题配置文件位于themes/next/_config.yml<br> 每行目录超长自动换行</p>
-<blockquote>
-<p>toc:<br>   enable: true<br>   wrap: true  </p>
-</blockquote>
-<h1 id="四、结果图展示"><a href="#四、结果图展示" class="headerlink" title="四、结果图展示"></a>四、结果图展示</h1>
-          
+          <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>Hexo博客NexT主题中是有目录的，只是在默认情况下没有开启，需要我们来手动开启。</p>
+<h1 id="二、修改样式文件custom-styl"><a href="#二、修改样式文件custom-styl" class="headerlink" title="二、修改样式文件custom.styl"></a>二、修改样式文件custom.styl</h1><p>文章目录样式文件custom.styl文件位于themes/next/source/css/_custom<br>打开后添加内容：<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Hexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E5%BC%80%E5%90%AF%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -926,6 +920,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -972,11 +973,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     

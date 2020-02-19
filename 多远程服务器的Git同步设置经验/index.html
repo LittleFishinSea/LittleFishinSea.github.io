@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="小屁屁的成长路程">
 <meta property="og:description" content="一、前言昨天完成了“通过Hexo的本地部署，将博客文件可随时同步至Github Pages”，今天早上起来就在思考，正好自己还租用了一台搬瓦工的VPS服务器，闲着也是闲着，能不能在本地Git Bash生成基于Hexo框架的静态网页后，通过一键处理的方式，同时同步到Github与Bandwagon的Git仓库里面，这样一方面效率很高，另一方面，也可以防止任何一家服务商的空间服务出现不可预知的故障或停">
 <meta property="article:published_time" content="2020-02-18T12:28:36.000Z">
-<meta property="article:modified_time" content="2020-02-19T05:42:59.569Z">
+<meta property="article:modified_time" content="2020-02-19T15:50:36.548Z">
 <meta property="article:author" content="Frank Q">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="NginX">
@@ -343,7 +343,7 @@
       
 
       
-        <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>昨天完成了“通过Hexo的本地部署，将博客文件可随时同步至Github Pages”，今天早上起来就在思考，正好自己还租用了一台搬瓦工的VPS服务器，闲着也是闲着，能不能在本地Git Bash生成基于Hexo框架的静态网页后，通过一键处理的方式，同时同步到Github与Bandwagon的Git仓库里面，这样一方面效率很高，另一方面，也可以防止任何一家服务商的空间服务出现不可预知的故障或停用的时候，自己的主页还能正常运转。通过近十个小时的不停歇折腾（抛开吃饭时间），终于将遇到的问题都解决，实现了“一键两更”的功能，开心。</p>
+        <h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>昨天完成了“通过Hexo的本地部署，将博客文件可随时同步至Github Pages”，今天早上起来就在思考，正好自己还租用了一台搬瓦工的VPS服务器，闲着也是闲着，能不能在本地Git Bash生成基于Hexo框架的静态网页后，通过一键处理的方式，同时同步到Github与Bandwagon的Git仓库里面，这样一方面效率很高，另一方面，也可以防止任何一家服务商的空间服务出现不可预知的故障或停用的时候，自己的主页还能正常运转。通过近十个小时的不停歇折腾（抛开吃饭时间），终于将遇到的问题都解决，实现了“一键两更”的功能，开心。<br> <a id="more"></a></p>
 <h1 id="二、搭建思路"><a href="#二、搭建思路" class="headerlink" title="二、搭建思路"></a>二、搭建思路</h1><p>在本地生成静态文件，把静态文件部署到VPS上，用Nginx直接做Web服务，由于hexo支持git的部署方式，从而可以实现从本地更新博客，方便快捷。</p>
 <h1 id="三、本地（Local-PC）环境部署"><a href="#三、本地（Local-PC）环境部署" class="headerlink" title="三、本地（Local PC）环境部署"></a>三、本地（Local PC）环境部署</h1><p>准备 node 和 git 环境，<br>首先，安装 NodeJS，因为 Hexo 是基于 Node.js 驱动的一款博客框架。<br>然后，安装 git，一个分布式版本控制系统，用于项目的版本控制管理，作者是 Linux 之父。如果 Git 还不熟悉可以参考廖雪峰大神的 Git 教程。</p>
 <p>两个工具不同的平台安装方法有所不一样，可自行了解按步骤安装，这里不详述了。安装成功后打开git bash（Windowns）或者终端（Mac），下方中将统一称为命令行。<br>在命令行中输入相应命令验证是否成功，如果成功会有相应的版本号。</p>

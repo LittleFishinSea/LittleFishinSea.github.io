@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="小屁屁的成长路程">
 <meta property="og:description" content="一、前言昨天完成了“通过Hexo的本地部署，将博客文件可随时同步至Github Pages”，今天早上起来就在思考，正好自己还租用了一台搬瓦工的VPS服务器，闲着也是闲着，能不能在本地Git Bash生成基于Hexo框架的静态网页后，通过一键处理的方式，同时同步到Github与Bandwagon的Git仓库里面，这样一方面效率很高，另一方面，也可以防止任何一家服务商的空间服务出现不可预知的故障或停">
 <meta property="article:published_time" content="2020-02-18T12:28:36.000Z">
-<meta property="article:modified_time" content="2020-02-19T15:50:36.548Z">
+<meta property="article:modified_time" content="2020-02-27T14:00:31.698Z">
 <meta property="article:author" content="Frank Q">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="NginX">
@@ -404,7 +404,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">添加所需要的路径(如 &#x2F;usr&#x2F;local&#x2F;bin）到&quot;secure_path&quot;下。</span><br><span class="line">Defaults    secure_path &#x3D; &#x2F;sbin:&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;bin</span><br></pre></td></tr></table></figure>
 <h2 id="2-安装vim"><a href="#2-安装vim" class="headerlink" title="2.安装vim"></a>2.安装vim</h2><p>Debian9有时候安装的时候没有vim，在centos用习惯了vim，安装命令如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install vim</span><br></pre></td></tr></table></figure>
-
+<p>安装完后，查看 vim 是否支持 clipboard 功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim --version | grep clipboard</span><br></pre></td></tr></table></figure>
+<p>如果有 +clipboard 则跳过这一步; 如果显示的是 -clipboard 说明不支持vim与系统粘贴板之间的复制粘贴功能, 需要安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install vim-gtk</span><br></pre></td></tr></table></figure>
+<p>至此，可使用 + 寄存器与系统粘贴板互通数据, “+yy 等操作。或者直接按住shift用鼠标左键选择需要复制的内容，然后到windows粘贴板中粘贴即可。</p>
 <h2 id="3-安装Git"><a href="#3-安装Git" class="headerlink" title="3.安装Git"></a>3.安装Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git-core  # Ubuntu,Debian</span><br><span class="line">sudo yum install git-core      # Fedora, Red Hat, CentOS</span><br></pre></td></tr></table></figure>
 <h2 id="4-建立Git仓库"><a href="#4-建立Git仓库" class="headerlink" title="4.建立Git仓库"></a>4.建立Git仓库</h2><h3 id="1-新建git用户"><a href="#1-新建git用户" class="headerlink" title="(1)新建git用户"></a>(1)新建git用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adduser git               #新建git用户</span><br><span class="line">passwd git                #设置账户密码</span><br><span class="line">gpasswd -a git sudo       #为git用户添加sudo权限</span><br></pre></td></tr></table></figure>
 <h3 id="2-建立裸仓库"><a href="#2-建立裸仓库" class="headerlink" title="(2)建立裸仓库"></a>(2)建立裸仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;home&#x2F;git              #进入git目录</span><br><span class="line">git init --bare hexo.git  #建立名为hexo.git的裸仓库</span><br><span class="line">chown -R git:git hexo.git #修改仓库用户属主：将该文件夹和文件夹下的所有文件和文件夹的用户和所在组改成git以及git组</span><br></pre></td></tr></table></figure>

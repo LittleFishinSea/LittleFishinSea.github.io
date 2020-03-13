@@ -342,13 +342,15 @@
 
       
         
-          
-            <h1 id="初心"><a href="#初心" class="headerlink" title="初心"></a>初心</h1><p>在部署Hexo之时，就对比考虑过是否上Wordpress，但当时只是想上一个轻量化的Blog，觉得Wordpress整个程序系统相对还是厚重了很多（尽管可视化程度会更高、功能与扩展性会更强大），于是暂时搁置。</p>
-<h1 id="随性"><a href="#随性" class="headerlink" title="随性"></a>随性</h1><p>前几天心里又在琢磨是否上wordpress的事情，毕竟觉得世界上占网络站点三分之一体量的程序，再怎么也得尝试一下，但是感觉环境部署还挺麻烦的，就一直磨机着这事。<br>昨天早上起床，吃完早饭，突然就想通了，立马动手开干。从早到晚折腾了一天，各种配置问题，一直折腾到凌晨，仍然被卡在wordpress安装不正常的问题上。睡前就在想，nginx、PHP、MariaDB单独测试都OK，和wordpress一联调马上出错，关键debug信息是安装程序往database写数据时出现update失败的提示，但是进入MariaDB那些改写的数据表项和内容又是已经成功写入的，那么估计问题还是出在wordpress与MariaDB之间的联系上。</p>
-<h1 id="利刃出鞘"><a href="#利刃出鞘" class="headerlink" title="利刃出鞘"></a>利刃出鞘</h1><p>今早一起来，在youtube上搜索到一个台湾的视频，提到MariaDB数据库设置用户权限在windows与MacOS上居然是有些许差别的（MacOS认可%范围代表所有位置，但是windows不认可），这就证实了昨天的想法，立即上机重新调测，成功进入后台Dashboard！</p>
-<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>此次在环境部署过程中，遇到很多坑（比如：要在PHP中开通Mysqli的扩展支持，不然无法调用数据库、PHP的FastCGI开通、MariaDB的用户权限范围设置等），还好都通过谷歌解决了，就算今天顺利进入了Wordpress的后台Dashboard，仍然遇到很多问题（比如：无法下载插件的时候需要在PHP中开通curl的扩展支持、下载插件超时等），找个时间系统总结一下整个环境配置过程。<br>晚安！</p>
-
-          
+          <h2 id="初心"><a href="#初心" class="headerlink" title="初心"></a>初心</h2><p>在部署Hexo之时，就对比考虑过是否上Wordpress，但当时只是想上一个轻量化的Blog，觉得Wordpress整个程序系统相对还是厚重了很多（尽管可视化程度会更高、功能与扩展性会更强大），于是暂时搁置。</p>
+<h2 id="随性"><a href="#随性" class="headerlink" title="随性"></a>随性</h2><p>前几天心里又在琢磨是否上wordpress的事情，毕竟觉得世界上占网络站点三分之一体量的程序，再怎么也得尝试一下，但是感觉环境部署还挺麻烦的，就一直磨机着这事。<br>昨天早上起床，吃完早饭，突然就想通了，立马动手开干。从早到晚折腾了一天，各种配置问题，一直折腾到凌晨，仍然被卡在wordpress安装不正常的问题上。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/%E7%BB%88%E4%BA%8E%E6%8A%8AWordpress%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%A5%BD%EF%BC%8C%E5%B9%B6%E8%B0%83%E9%80%9A%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%B0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

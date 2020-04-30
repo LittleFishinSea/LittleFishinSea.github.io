@@ -310,6 +310,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%873%EF%BC%9A%E5%AE%8C%E6%88%90%E6%95%8C%E6%88%91%E5%8F%8C%E6%96%B9%E5%AD%90%E5%BC%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%87%8D%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Q">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小屁屁的成长路程">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%873%EF%BC%9A%E5%AE%8C%E6%88%90%E6%95%8C%E6%88%91%E5%8F%8C%E6%96%B9%E5%AD%90%E5%BC%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%87%8D%E6%9E%84/" itemprop="url">飞机大战优化续篇3：完成敌我双方子弹系统的重构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T23:27:00+08:00">
+                2020-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E8%B7%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">网路技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在昨天完成敌方大飞机的完美散弹发射模型（两种变种：1、散弹的发射坐标不同，精调发射坐标与X轴Y轴的速度；2、散弹的发射坐标相同，固定发射角度，精调X轴Y轴的速度）的启发下，今天重新构架了整个游戏的子弹系统，抛弃之前的列表控制方式，转向sprite.Group()控制方式。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%873%EF%BC%9A%E5%AE%8C%E6%88%90%E6%95%8C%E6%88%91%E5%8F%8C%E6%96%B9%E5%AD%90%E5%BC%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%87%8D%E6%9E%84/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%872%EF%BC%9A%E6%95%8C%E6%96%B9%E5%A4%A7%E9%A3%9E%E6%9C%BA%E5%AD%90%E5%BC%B9%E6%96%B9%E6%A1%88%E5%AE%8C%E7%BE%8E%E7%89%88%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -402,10 +548,14 @@
 
       
         
-          
-            <p>从上一篇实现敌方飞机增加子弹效果的博文，到现在刚好过去了两天。<br>上一篇写到，已经完美的解决了敌方飞机添加子弹的功能，结果在这两天进一步优化时，发现了太多太多的逻辑陷阱，实际效果也差强人意，代码修改了一版又一版，都出现各种各样的问题。曾经有两个版本从画面的呈现上看，似乎找到了解决版本，但是都经不过深入推敲：要么在暂停到一帧页面时，发现了重影的迹象，要么在修改局部参数时，结果让人大跌眼镜。两天时间，苦思不得其解。现在回首，当时说的完美解决，简直是贻笑大方。<br>今天下午四五点的时候（现在已是凌晨，讲究的说法，是昨天下午^_^），经过在沙发上静静的思索从第一帧的出现，到120帧的出现，到底应该是怎么样的实例出现逻辑，正好在谷歌上看到某个人回答其他人问题的一句话“可以在sprite类实例生成时，自动添加到某指定名称的sprite.Group()中”，这句话一下激发了自己的灵感，马上起身在bullet类文件里面把Bullet_Enemy类的启动语句按刚才那位网友的说法进行的修改，结果…，并没有什么卵用，运行失败。<br>虽然这条路没走通，但他说的在生成时加入组的这个说法让我思路一下打开了，于是到main文件中，找到if not(delay 120):这个延时控制的loop，原本里面是一个控制bullet_enemy列表的索引跳转的功能，然后通过读取索引对应的列表中装的子弹实例进行绘制，但是总是调测不到正常的状态。现在我把之前通过临时列表来控制bullet_enemy列表索引的方法全部废除，直接在loop中，往enemybullet这个sprite.Group()(该精灵组需在最开始做实例化操作)通过.add()的方式添加带有当前飞机位置信息、速度信息的sprite类实例（5颗新实例化的子弹，位置参数为飞机的5个坐标值，速度参数通过getX与getY传递给类文件进行初始化）。然后，相当于每过120帧都会跳进这个LOOP来新生成5颗最新位置的子弹。然后子弹进行移动、绘制。只是需要注意：1、子弹飞出屏幕范围后，要及时设置其active属性为False，这样CPU将不再继续绘制；2、子弹的母体（敌方飞机）被我方飞机撞爆炸，或者被我方子弹撞爆炸后，敌方飞机的ACTIVE会设置为False，但是并不影响已经射出的敌方子弹继续按轨迹进行飞行，直到飞出屏幕范围，才不再绘制。<br>至此，我可以负责任的说，敌方飞机子弹的功能现在是真的完美解决了，逻辑链条清晰而简单，并且适合变种应用。<br>比如，晚上我化了很短的时候，只是调整了生成子弹时，子弹的位置参数，与速度参数（Xspeed、Yspeed）,就顺利实现了敌方飞机的散弹功能（见附图）。<br>好了，该睡觉了，晚安，祝大家五一劳动节快乐！<br><img src="/images/enemyshoot.jpg"></p>
-
-          
+          <p>从上一篇实现敌方飞机增加子弹效果的博文，到现在刚好过去了两天。<br>上一篇写到，已经完美的解决了敌方飞机添加子弹的功能，结果在这两天进一步优化时，发现了太多太多的逻辑陷阱，实际效果也差强人意，代码修改了一版又一版，都出现各种各样的问题。曾经有两个版本从画面的呈现上看，似乎找到了解决版本，但是都经不过深入推敲：要么在暂停到一帧页面时，发现了重影的迹象，要么在修改局部参数时，结果让人大跌眼镜。两天时间，苦思不得其解。现在回首，当时说的完美解决，简直是贻笑大方。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%872%EF%BC%9A%E6%95%8C%E6%96%B9%E5%A4%A7%E9%A3%9E%E6%9C%BA%E5%AD%90%E5%BC%B9%E6%96%B9%E6%A1%88%E5%AE%8C%E7%BE%8E%E7%89%88%E6%9C%AC/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1607,141 +1757,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Q">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小屁屁的成长路程">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-16T09:19:06+08:00">
-                2020-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -1789,7 +1811,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

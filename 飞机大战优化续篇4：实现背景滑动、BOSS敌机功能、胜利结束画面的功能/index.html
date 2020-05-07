@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -79,14 +79,20 @@
 
 
 
-<meta name="description" content="总得有一处空间，可以记得她的成长经历，等她长大之后，能够回顾自己父母眼中的过往，能够更坦然的面对生活，更有勇气去做自己。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小屁屁的成长路程">
-<meta property="og:url" content="http://littlefishinsea.github.io/tags/NexT/index.html">
+<meta name="description" content="好像挺久没更新优化续篇了，其实是过了一个劳动节，节后又开始继续功能深挖。5月5日，劳动节放假最后一天，应邀见了梁博与门博，并在梁博的写字楼空间里面参加了下他们公司的基本情况。门博从中撮合，感觉梁博想招揽我过去他们团队的感觉，不急，再等等看。节后初步想法是，将目前的游戏版本向“关卡制”的方式进行探索，那么就涉及了几个需要考虑与待解决的问题：1、游戏画面最好修改为滚轴滑动的方式；2、敌机BOSS在什么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="飞机大战优化续篇4：实现背景滑动、BOSS敌机功能、胜利结束画面的功能">
+<meta property="og:url" content="http://littlefishinsea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%874%EF%BC%9A%E5%AE%9E%E7%8E%B0%E8%83%8C%E6%99%AF%E6%BB%91%E5%8A%A8%E3%80%81BOSS%E6%95%8C%E6%9C%BA%E5%8A%9F%E8%83%BD%E3%80%81%E8%83%9C%E5%88%A9%E7%BB%93%E6%9D%9F%E7%94%BB%E9%9D%A2%E7%9A%84%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="小屁屁的成长路程">
-<meta property="og:description" content="总得有一处空间，可以记得她的成长经历，等她长大之后，能够回顾自己父母眼中的过往，能够更坦然的面对生活，更有勇气去做自己。">
+<meta property="og:description" content="好像挺久没更新优化续篇了，其实是过了一个劳动节，节后又开始继续功能深挖。5月5日，劳动节放假最后一天，应邀见了梁博与门博，并在梁博的写字楼空间里面参加了下他们公司的基本情况。门博从中撮合，感觉梁博想招揽我过去他们团队的感觉，不急，再等等看。节后初步想法是，将目前的游戏版本向“关卡制”的方式进行探索，那么就涉及了几个需要考虑与待解决的问题：1、游戏画面最好修改为滚轴滑动的方式；2、敌机BOSS在什么">
+<meta property="og:image" content="http://littlefishinsea.github.io/images/20200507_1.jpg">
+<meta property="og:image" content="http://littlefishinsea.github.io/images/20200507_2.jpg">
+<meta property="article:published_time" content="2020-05-07T16:08:51.000Z">
+<meta property="article:modified_time" content="2020-05-07T16:47:48.061Z">
 <meta property="article:author" content="Frank Q">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://littlefishinsea.github.io/images/20200507_1.jpg">
 
 
 
@@ -116,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://LittleFishinSea.github.io/tags/NexT/"/>
+  <link rel="canonical" href="http://LittleFishinSea.github.io/飞机大战优化续篇4：实现背景滑动、BOSS敌机功能、胜利结束画面的功能/"/>
 
 
 
 
 
-  <title>标签: NexT | 小屁屁的成长路程</title>
+  <title>飞机大战优化续篇4：实现背景滑动、BOSS敌机功能、胜利结束画面的功能 | 小屁屁的成长路程</title>
   
 
 
@@ -141,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,54 +301,173 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>NexT<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%874%EF%BC%9A%E5%AE%9E%E7%8E%B0%E8%83%8C%E6%99%AF%E6%BB%91%E5%8A%A8%E3%80%81BOSS%E6%95%8C%E6%9C%BA%E5%8A%9F%E8%83%BD%E3%80%81%E8%83%9C%E5%88%A9%E7%BB%93%E6%9D%9F%E7%94%BB%E9%9D%A2%E7%9A%84%E5%8A%9F%E8%83%BD/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Q">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小屁屁的成长路程">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Hexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E5%BC%80%E5%90%AF%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95/" itemprop="url">
-              
-                <span itemprop="name">Hexo博客NexT主题开启文章目录</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">飞机大战优化续篇4：实现背景滑动、BOSS敌机功能、胜利结束画面的功能</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-02-17T22:24:38+08:00"
-              content="2020-02-17" >
-          02-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-08T00:08:51+08:00">
+                2020-05-08
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E8%B7%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">网路技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>好像挺久没更新优化续篇了，其实是过了一个劳动节，节后又开始继续功能深挖。<br>5月5日，劳动节放假最后一天，应邀见了梁博与门博，并在梁博的写字楼空间里面参加了下他们公司的基本情况。<br>门博从中撮合，感觉梁博想招揽我过去他们团队的感觉，不急，再等等看。<br>节后初步想法是，将目前的游戏版本向“关卡制”的方式进行探索，那么就涉及了几个需要考虑与待解决的问题：<br>1、游戏画面最好修改为滚轴滑动的方式；<br>2、敌机BOSS在什么时机入场，我觉得按惯例是游戏背景图片滑动到顶端后，背景图片不动的时候；<br>3、敌机BOSS入场后，是静止的，还是动态的？<br>4、敌机BOSS的子弹系统设计的合理性，应该考虑可以逼迫我方飞机到处闪躲，并且避免明显的子弹真空地带；<br>5、敌方BOSS被消灭后，不再调用GAME OVER画面，而转而调用VICTORY画面；<br>6、VICTROY画面里面，是否有下一关的按钮，如果有下一关，如何调用？<br>… …<br>5月6日，初步探索了一下，解决了上面的第一个问题，即实现了背景图片的滚动效果，并可根据是实战，还是调试阶段，而自由设置滚动速度（滚动速度的快慢决定了遇见BOSS的快慢）。<br>5月7日，解决了上面的第二、第三、第四、第五个问题。关键点总结如下：<br>敌机BOSS目前设置为，在背景图片background.png的左上角滑动到(0,0)时触发BOSS敌机出现的（添加了一个boss_appear的判断开关进行控制）。<br>敌机BOSS入场后，当MOVE到50像素时，不再移动，保持静止状态，开始发射子弹。<br>子弹分为直行子弹与散弹两种，发射频率不一样，可以由此控制游戏的难易程度。<br>敌机BOSS在被消灭后，遇到几种异常情况：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">第一种情况：</span><br><span class="line">最开始，是将VICTORY画面放在敌机BOSS毁灭的LOOP里面的，导致的结果是：</span><br><span class="line">消灭BOOS后，游戏画面并不会停止，也不调用VICTORY画面，而是不停的显示爆炸画面与爆炸音效，飞机也可以继续发射子弹。</span><br><span class="line">第二种情况：</span><br><span class="line">在遇到第一情况后，就将VICTORY画面的调用行为放在与GAME OVER画面调用行为并行的位置处，进入LOOP的条件为判断敌机BOSS是否挂掉（if boss.active &#x3D;&#x3D; False）。导致的结果是：</span><br><span class="line">消灭BOSS后，游戏画面顺利停止，会调用VICTORY画面，但是可以从游戏画面看到，游戏并未进入敌机BOSS爆炸绘制的LOOP，就直接调用了VICTORY画面。</span><br><span class="line">原因分析：</span><br><span class="line">敌机BOSS的active初始值为True，根据boss.active能进入敌机BOSS的绘制与子弹装入弹夹功能。</span><br><span class="line">当我方子弹进行碰撞测试时，如果我方子弹与敌机BOSS发生了碰撞，并且boss.blood &#x3D;&#x3D; 0时，设置了boss.active &#x3D; False。</span><br><span class="line">此时boss.active为False将让程序在下一帧运行时，直接跳过主程序LOOP： if not pause and LIFE_NUM and boss.active：，直接进入了VICTORY画面的调用，于是敌机BOSS的爆炸画面无法执行。</span><br></pre></td></tr></table></figure>
+<p>解决办法：<br>引入新的判断开关use_victory_screen，默认时为False。<br>将主程序LOOP的跳入条件进行修改，变更为：if not pause and LIFE_NUM and use_victory_screen == False:<br>然后在敌机BOSS的爆炸事件完成后，设置use_victory_screen = True，直接在主程序LOOP转向，调用VICTORY画面。</p>
+<p>接下来，将考虑在VICTORY画面添加进入下一个关卡的控制按钮，并探索关卡制的跳转原理。</p>
+<p>实现后的游戏画面如下：<br><img src="/images/20200507_1.jpg"><br><img src="/images/20200507_2.jpg"></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%873%EF%BC%9A%E5%AE%8C%E6%88%90%E6%95%8C%E6%88%91%E5%8F%8C%E6%96%B9%E5%AD%90%E5%BC%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%87%8D%E6%9E%84/" rel="next" title="飞机大战优化续篇3：完成敌我双方子弹系统的重构">
+                <i class="fa fa-chevron-left"></i> 飞机大战优化续篇3：完成敌我双方子弹系统的重构
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -350,6 +475,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -593,6 +722,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

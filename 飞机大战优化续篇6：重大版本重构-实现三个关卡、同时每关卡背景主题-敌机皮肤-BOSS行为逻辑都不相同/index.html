@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -79,15 +79,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="距离上一次更新，已经过去好几天，迟迟未更新的原因是，本版本进行了很大幅度的重构。之前的版本，都是用的剪影版的飞机，在STAGE1场景下，估计是因为特定的背景图片，掩盖了剪影版飞机的缺点，于是也就那么凑合了。结果在开拓了STAGE2以后，因为更换了背景图片，发现剪影版飞机因为初期未精心处理图片造型，在背景的衬托下，凸显了很多惨不忍睹的锯齿与缺陷，于是心一横，做了几件事情：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://littlefishinsea.github.io/hello-world/index.html">
+<meta property="og:title" content="飞机大战优化续篇6：重大版本重构 &gt; 实现三个关卡、同时每关卡背景主题&#x2F;敌机皮肤&#x2F;BOSS行为逻辑都不相同">
+<meta property="og:url" content="http://littlefishinsea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%876%EF%BC%9A%E9%87%8D%E5%A4%A7%E7%89%88%E6%9C%AC%E9%87%8D%E6%9E%84-%E5%AE%9E%E7%8E%B0%E4%B8%89%E4%B8%AA%E5%85%B3%E5%8D%A1%E3%80%81%E5%90%8C%E6%97%B6%E6%AF%8F%E5%85%B3%E5%8D%A1%E8%83%8C%E6%99%AF%E4%B8%BB%E9%A2%98-%E6%95%8C%E6%9C%BA%E7%9A%AE%E8%82%A4-BOSS%E8%A1%8C%E4%B8%BA%E9%80%BB%E8%BE%91%E9%83%BD%E4%B8%8D%E7%9B%B8%E5%90%8C/index.html">
 <meta property="og:site_name" content="小屁屁的成长路程">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="article:published_time" content="2020-02-16T01:19:06.192Z">
-<meta property="article:modified_time" content="2020-02-16T01:19:06.192Z">
+<meta property="og:description" content="距离上一次更新，已经过去好几天，迟迟未更新的原因是，本版本进行了很大幅度的重构。之前的版本，都是用的剪影版的飞机，在STAGE1场景下，估计是因为特定的背景图片，掩盖了剪影版飞机的缺点，于是也就那么凑合了。结果在开拓了STAGE2以后，因为更换了背景图片，发现剪影版飞机因为初期未精心处理图片造型，在背景的衬托下，凸显了很多惨不忍睹的锯齿与缺陷，于是心一横，做了几件事情：">
+<meta property="article:published_time" content="2020-05-12T14:38:57.000Z">
+<meta property="article:modified_time" content="2020-05-12T15:01:26.801Z">
 <meta property="article:author" content="Frank Q">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://LittleFishinSea.github.io/hello-world/"/>
+  <link rel="canonical" href="http://LittleFishinSea.github.io/飞机大战优化续篇6：重大版本重构-实现三个关卡、同时每关卡背景主题-敌机皮肤-BOSS行为逻辑都不相同/"/>
 
 
 
 
 
-  <title>Hello World | 小屁屁的成长路程</title>
+  <title>飞机大战优化续篇6：重大版本重构 > 实现三个关卡、同时每关卡背景主题/敌机皮肤/BOSS行为逻辑都不相同 | 小屁屁的成长路程</title>
   
 
 
@@ -311,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%876%EF%BC%9A%E9%87%8D%E5%A4%A7%E7%89%88%E6%9C%AC%E9%87%8D%E6%9E%84-%E5%AE%9E%E7%8E%B0%E4%B8%89%E4%B8%AA%E5%85%B3%E5%8D%A1%E3%80%81%E5%90%8C%E6%97%B6%E6%AF%8F%E5%85%B3%E5%8D%A1%E8%83%8C%E6%99%AF%E4%B8%BB%E9%A2%98-%E6%95%8C%E6%9C%BA%E7%9A%AE%E8%82%A4-BOSS%E8%A1%8C%E4%B8%BA%E9%80%BB%E8%BE%91%E9%83%BD%E4%B8%8D%E7%9B%B8%E5%90%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Frank Q">
@@ -328,7 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">飞机大战优化续篇6：重大版本重构 > 实现三个关卡、同时每关卡背景主题/敌机皮肤/BOSS行为逻辑都不相同</h1>
         
 
         <div class="post-meta">
@@ -340,8 +341,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-16T09:19:06+08:00">
-                2020-02-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-12T22:38:57+08:00">
+                2020-05-12
               </time>
             
 
@@ -350,6 +351,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E8%B7%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">网路技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -378,19 +401,10 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>距离上一次更新，已经过去好几天，迟迟未更新的原因是，本版本进行了很大幅度的重构。<br>之前的版本，都是用的剪影版的飞机，在STAGE1场景下，估计是因为特定的背景图片，掩盖了剪影版飞机的缺点，于是也就那么凑合了。<br>结果在开拓了STAGE2以后，因为更换了背景图片，发现剪影版飞机因为初期未精心处理图片造型，在背景的衬托下，凸显了很多惨不忍睹的锯齿与缺陷，于是心一横，做了几件事情： <a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、将游戏最终设计为3关，每1关有自己的背景主题。第一关：地球大战；第二关：虫巢大战；第三关：太空大战。</span><br><span class="line">2、每一个主题关卡，所配套的敌机的样式都不一样，需要进行资源搜集与处理。</span><br><span class="line">3、每一个关卡的BOSS的样式，都需要与当前关卡的背景想契合，并且每个BOSS的行为特征、发射子弹的方式都不一样。</span><br></pre></td></tr></table></figure>
+<p>目前上面3点都已完成，游戏整体运行正常，还有几点需要进一步改善：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、记分系统需要由关卡内记分，变成跨关卡记分；</span><br><span class="line">2、第二关的子弹相对背景有点不太明显，需要重新匹配颜色合适的子弹；</span><br><span class="line">3、某一次测试在第二关发现，如果在游戏失败后，重新开始游戏，敌机的出现都很正常，但是BOSS却不再出现，需要合适是否有开关控制的问题；</span><br><span class="line">4、职能界面（欢迎界面、胜利界面、失败界面）的美化</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -406,6 +420,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
 
       
       
@@ -415,15 +435,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%875%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%A7%8B%E7%94%BB%E9%9D%A2%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%94%BB%E9%9D%A2%E7%9A%84%E5%88%86%E7%A6%BB/" rel="next" title="飞机大战优化续篇5：实现游戏开始画面与运行画面的分离">
+                <i class="fa fa-chevron-left"></i> 飞机大战优化续篇5：实现游戏开始画面与运行画面的分离
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/%E5%BC%80%E7%AF%87%E7%AB%8B%E4%B9%89/" rel="prev" title="开篇立义">
-                开篇立义 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,17 +495,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,22 +576,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

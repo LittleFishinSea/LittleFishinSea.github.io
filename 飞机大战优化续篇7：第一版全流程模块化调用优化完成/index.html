@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -79,13 +79,16 @@
 
 
 
-<meta name="description" content="总得有一处空间，可以记得她的成长经历，等她长大之后，能够回顾自己父母眼中的过往，能够更坦然的面对生活，更有勇气去做自己。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小屁屁的成长路程">
-<meta property="og:url" content="http://littlefishinsea.github.io/archives/2020/index.html">
+<meta name="description" content="自从上文提及的实现多关卡独立控制后，游戏主文件的代码量随着关卡的增多，成倍的增长，这带来了很多潜在的问题，比如： 12341：某相同功能（比如：敌方飞机的某特性）需要批量调整时，需要进三个关卡分别进行修改，耗时耗力，还容易出错；2：代码量越来越多，可阅读性越来越差；3、本来实现相同功能的代码，在复制与修改过程中，可能发生了变动，无法直观的看到，可维护性差；... ... 这一周就寻思着，能不能将各">
+<meta property="og:type" content="article">
+<meta property="og:title" content="飞机大战优化续篇7：第一版全流程模块化调用优化完成">
+<meta property="og:url" content="http://littlefishinsea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%877%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%89%88%E5%85%A8%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96%E5%AE%8C%E6%88%90/index.html">
 <meta property="og:site_name" content="小屁屁的成长路程">
-<meta property="og:description" content="总得有一处空间，可以记得她的成长经历，等她长大之后，能够回顾自己父母眼中的过往，能够更坦然的面对生活，更有勇气去做自己。">
+<meta property="og:description" content="自从上文提及的实现多关卡独立控制后，游戏主文件的代码量随着关卡的增多，成倍的增长，这带来了很多潜在的问题，比如： 12341：某相同功能（比如：敌方飞机的某特性）需要批量调整时，需要进三个关卡分别进行修改，耗时耗力，还容易出错；2：代码量越来越多，可阅读性越来越差；3、本来实现相同功能的代码，在复制与修改过程中，可能发生了变动，无法直观的看到，可维护性差；... ... 这一周就寻思着，能不能将各">
+<meta property="article:published_time" content="2020-05-16T15:33:41.000Z">
+<meta property="article:modified_time" content="2020-05-16T16:12:11.442Z">
 <meta property="article:author" content="Frank Q">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://LittleFishinSea.github.io/archives/2020/"/>
+  <link rel="canonical" href="http://LittleFishinSea.github.io/飞机大战优化续篇7：第一版全流程模块化调用优化完成/"/>
 
 
 
 
 
-  <title>归档 | 小屁屁的成长路程</title>
+  <title>飞机大战优化续篇7：第一版全流程模块化调用优化完成 | 小屁屁的成长路程</title>
   
 
 
@@ -141,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,411 +298,177 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%877%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%89%88%E5%85%A8%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96%E5%AE%8C%E6%88%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Q">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小屁屁的成长路程">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">飞机大战优化续篇7：第一版全流程模块化调用优化完成</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-16T23:33:41+08:00">
+                2020-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 15 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E8%B7%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">网路技术</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%877%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%89%88%E5%85%A8%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%9D%97%E5%8C%96%E8%B0%83%E7%94%A8%E4%BC%98%E5%8C%96%E5%AE%8C%E6%88%90/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇7：第一版全流程模块化调用优化完成</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-16T23:33:41+08:00"
-              content="2020-05-16" >
-          05-16
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%876%EF%BC%9A%E9%87%8D%E5%A4%A7%E7%89%88%E6%9C%AC%E9%87%8D%E6%9E%84-%E5%AE%9E%E7%8E%B0%E4%B8%89%E4%B8%AA%E5%85%B3%E5%8D%A1%E3%80%81%E5%90%8C%E6%97%B6%E6%AF%8F%E5%85%B3%E5%8D%A1%E8%83%8C%E6%99%AF%E4%B8%BB%E9%A2%98-%E6%95%8C%E6%9C%BA%E7%9A%AE%E8%82%A4-BOSS%E8%A1%8C%E4%B8%BA%E9%80%BB%E8%BE%91%E9%83%BD%E4%B8%8D%E7%9B%B8%E5%90%8C/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇6：重大版本重构 > 实现三个关卡、同时每关卡背景主题/敌机皮肤/BOSS行为逻辑都不相同</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-12T22:38:57+08:00"
-              content="2020-05-12" >
-          05-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%875%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%A7%8B%E7%94%BB%E9%9D%A2%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%94%BB%E9%9D%A2%E7%9A%84%E5%88%86%E7%A6%BB/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇5：实现游戏开始画面与运行画面的分离</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-08T22:05:53+08:00"
-              content="2020-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>自从上文提及的实现多关卡独立控制后，游戏主文件的代码量随着关卡的增多，成倍的增长，这带来了很多潜在的问题，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1：某相同功能（比如：敌方飞机的某特性）需要批量调整时，需要进三个关卡分别进行修改，耗时耗力，还容易出错；</span><br><span class="line">2：代码量越来越多，可阅读性越来越差；</span><br><span class="line">3、本来实现相同功能的代码，在复制与修改过程中，可能发生了变动，无法直观的看到，可维护性差；</span><br><span class="line">... ...</span><br></pre></td></tr></table></figure>
+<p>这一周就寻思着，能不能将各种功能进行模块化，通过调用实现功能，最大限度实现代码复用，通过前期用小的功能模块进行尝试，发现可行，于是逐渐深入解耦，直到今天晚上终于完成了整个游戏主程序的代码重构。 <a id="more"></a><br>在代码重构过程中，有几点感触：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1：重构过程中，发现了很多以前代码隐藏的BUG，如果不经历这个过程，估计都很难发现（比如：通过Failed Screen调用重玩一局游戏时，对方BOSS还隐身在上一次对战结束时的位置，让我方飞机发生遇到“空气”坠机事件、每个STAGE的主游戏LOOP里面都发现了有两处都在同时控制SWITCH_IMAGE参数，一处是1帧取反一次，一次是10帧取反一次，导致游戏的一些动画显示效果不明显...）；</span><br><span class="line">2、从各STAGE合并相同功能部分进行调用，就涉及很多原来的局部变量变成了全部变量的问题，这也是模块化重构过程遇到的比较多的情况，最后通过统一调用重置模块完成了问题解决；</span><br><span class="line">3、模块化后，3个关卡的STAGE主游戏LOOP完全就变成了一个空壳的舞台，只需要调用各位演员（功能函数）上台表演即可，代码可阅读性提升非常显著；</span><br><span class="line">4、由于各种功能函数的职能清晰，哪里有问题上哪里解决，后续的游戏扩展性与可维护性都提升非常显著；</span><br><span class="line">5、模块化的过程，就是不断进行代码复用的过程，主游戏文件原来有3500行左右的代码，模块化完成后，整体缩减成2000行左右，代码优化效果非常显著；</span><br></pre></td></tr></table></figure>
+<p>模块化完成后，试玩了两局，第一感觉没什么问题了，明天再进行完全的测试，如果功能与BUG测试OK，就可以进行如下工作了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1：游戏难度与可玩性调试：通过设置不同的背景图片滚动速度来控制每个关卡的游戏时间、设置每个难度增加的敌机数量来控制游戏的困难程度等，调试出一个大众能接受的游戏难度与节奏；</span><br><span class="line">2、了解PY to EXE的文件封装方法，并尝试进行封装；</span><br><span class="line">3、了解跨平台封装的方法，看从PC直接跨到手机端的可行性；</span><br></pre></td></tr></table></figure>
+<p>其实本次模块化，还留有一个不影响游戏运行的“小尾巴”还没完美解决，问题描述如下，后续在考虑下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">问题描述：</span><br><span class="line">游戏暂停功能里面，当点击了“暂停”后，原来的‘PAUSE’并没有消失，而是叠在了‘PLAY’的下面，导致显示效果不佳，但是功能性未受影响。</span><br><span class="line">可能的问题溯源：</span><br><span class="line">当鼠标点击了‘PAUSE’按钮的同一帧，程序让全局变量self.pause赋值为True，这次游戏直接不再进入主游戏LOOP，跳过主游戏LOOP直接调用UI_FIXED_SIGH函数进行暂停按钮绘制，此时的按钮变量仍为‘PAUSE’按钮，到下一帧，捕获了鼠标移动时间，按钮变量变为‘PLAY’，跳过主游戏LOOP进行按钮绘制，因为游戏背景不再刷新，在让‘PLAY’按钮直接绘制在了‘PAUSE’按钮的上方。</span><br></pre></td></tr></table></figure>
+<p>好了，这两天解耦重构的挺辛苦的，费脑费力，感觉有了这次的模块化框架后，后续的游戏开发将容易太多，毕竟重构耗费的精力，有时比重写一次还多。<br>上床睡觉了，可以睡个好觉了，晚安~</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%874%EF%BC%9A%E5%AE%9E%E7%8E%B0%E8%83%8C%E6%99%AF%E6%BB%91%E5%8A%A8%E3%80%81BOSS%E6%95%8C%E6%9C%BA%E5%8A%9F%E8%83%BD%E3%80%81%E8%83%9C%E5%88%A9%E7%BB%93%E6%9D%9F%E7%94%BB%E9%9D%A2%E7%9A%84%E5%8A%9F%E8%83%BD/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇4：实现背景滑动、BOSS敌机功能、胜利结束画面的功能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-08T00:08:51+08:00"
-              content="2020-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%873%EF%BC%9A%E5%AE%8C%E6%88%90%E6%95%8C%E6%88%91%E5%8F%8C%E6%96%B9%E5%AD%90%E5%BC%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%87%8D%E6%9E%84/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇3：完成敌我双方子弹系统的重构</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-30T23:27:00+08:00"
-              content="2020-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%872%EF%BC%9A%E6%95%8C%E6%96%B9%E5%A4%A7%E9%A3%9E%E6%9C%BA%E5%AD%90%E5%BC%B9%E6%96%B9%E6%A1%88%E5%AE%8C%E7%BE%8E%E7%89%88%E6%9C%AC/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇2：敌方大飞机子弹方案完美版本</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-30T00:12:39+08:00"
-              content="2020-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%871%EF%BC%9A%E6%95%8C%E6%96%B9%E5%A4%A7%E9%A3%9E%E6%9C%BA%E5%A2%9E%E5%8A%A0%E5%AD%90%E5%BC%B9%E6%95%88%E6%9E%9C/" itemprop="url">
-              
-                <span itemprop="name">飞机大战优化续篇1：敌方大飞机增加主动子弹攻击功能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-28T00:57:42+08:00"
-              content="2020-04-28" >
-          04-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E5%AE%A3%E5%91%8A%EF%BC%9Apython%E6%AD%A3%E5%BC%8F%E5%85%A5%E9%97%A8%E4%BA%86/" itemprop="url">
-              
-                <span itemprop="name">宣告：python正式入门了</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-04-25T23:57:14+08:00"
-              content="2020-04-25" >
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E6%96%90%E8%AE%AFN1%E5%88%B7%E6%9C%BA%E6%8A%98%E8%85%BE%EF%BC%9A%E5%85%B3%E9%94%AE%E5%88%86%E5%8C%BA%E9%99%8D%E7%BA%A7%E3%80%81%E5%88%B7%E5%AE%98%E6%94%B9%E3%80%81U%E7%9B%98%E5%90%AF%E5%8A%A8OpenWRT/" itemprop="url">
-              
-                <span itemprop="name">斐讯N1刷机折腾：关键分区降级、刷官改、U盘启动OpenWRT</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-17T21:22:31+08:00"
-              content="2020-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/%E7%BB%88%E4%BA%8E%E6%8A%8AWordpress%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%A5%BD%EF%BC%8C%E5%B9%B6%E8%B0%83%E9%80%9A%E8%BF%9B%E5%85%A5%E5%90%8E%E5%8F%B0/" itemprop="url">
-              
-                <span itemprop="name">终于把Wordpress的环境配置好，并调通进入后台</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-13T22:43:08+08:00"
-              content="2020-03-13" >
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%876%EF%BC%9A%E9%87%8D%E5%A4%A7%E7%89%88%E6%9C%AC%E9%87%8D%E6%9E%84-%E5%AE%9E%E7%8E%B0%E4%B8%89%E4%B8%AA%E5%85%B3%E5%8D%A1%E3%80%81%E5%90%8C%E6%97%B6%E6%AF%8F%E5%85%B3%E5%8D%A1%E8%83%8C%E6%99%AF%E4%B8%BB%E9%A2%98-%E6%95%8C%E6%9C%BA%E7%9A%AE%E8%82%A4-BOSS%E8%A1%8C%E4%B8%BA%E9%80%BB%E8%BE%91%E9%83%BD%E4%B8%8D%E7%9B%B8%E5%90%8C/" rel="next" title="飞机大战优化续篇6：重大版本重构 > 实现三个关卡、同时每关卡背景主题/敌机皮肤/BOSS行为逻辑都不相同">
+                <i class="fa fa-chevron-left"></i> 飞机大战优化续篇6：重大版本重构 > 实现三个关卡、同时每关卡背景主题/敌机皮肤/BOSS行为逻辑都不相同
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -707,6 +476,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -950,6 +723,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

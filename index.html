@@ -310,6 +310,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/React-Learning-day05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Q">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小屁屁的成长路程">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/React-Learning-day05/" itemprop="url">React-Learning-day05</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-20T14:02:06+08:00">
+                2020-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Ant 蚂蚁框架</p>
+<p>安装使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;通过cnpm全局安装create-react-app命令</span><br><span class="line">cnpm install -g create-react-app</span><br><span class="line">&#x2F;&#x2F;使用create-react-app命令创建名为reactapp的app应用</span><br><span class="line">create-react-app reactapp</span><br><span class="line">&#x2F;&#x2F;安装蚂蚁的移动UI</span><br><span class="line">cnpm install antd-mobile --save</span><br></pre></td></tr></table></figure>
+<p>全部导入样式和js：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Button &#125; from &#39;antd-mobile&#39;;</span><br><span class="line">import &#39;antd-mobile&#x2F;dist&#x2F;antd-mobile.css&#39;;</span><br></pre></td></tr></table></figure>
+<p>按需要导入（手动引入）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import DatePicker from &#39;antd-mobile&#x2F;lib&#x2F;date-picker&#39;;  &#x2F;&#x2F; 加载 JS</span><br><span class="line">import &#39;antd-mobile&#x2F;lib&#x2F;date-picker&#x2F;style&#x2F;css&#39;;        &#x2F;&#x2F; 加载 CSS</span><br></pre></td></tr></table></figure>
+<p>按需要导入（安装插件方式）：<br>1、安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install babel-plugin-import --save</span><br></pre></td></tr></table></figure>
+<p>2、配置：<br>npm命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">显性化各种依赖配置信息：</span><br><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;Saving before ejecting&quot;</span><br><span class="line"></span><br><span class="line">npm run eject</span><br></pre></td></tr></table></figure>
+<p>Packjson</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&quot;babel&quot;: &#123;</span><br><span class="line">  &quot;presets&quot;: [</span><br><span class="line">    &quot;react-app&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;plugins&quot;: [</span><br><span class="line">  [&quot;import&quot;, &#123; &quot;libraryName&quot;: &quot;antd-mobile&quot;, &quot;style&quot;: &quot;css&quot; &#125;]</span><br><span class="line">]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>项目数据：<br>1、数据导入<br>将json文件导入到数据库。创建数据库，右键点击表，选择导入文件，文件导入json文件，点击完成。<br>2、创建服务器<br>npm init<br>cnpm install express –save<br>cnpm install mysql –save<br>创建index.js文件<br>3、前端依赖<br>需要安装的内容：<br>axios<br>react-router-dom<br>react-redux</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/React-Learning-day04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -380,62 +514,16 @@
 
       
         
-          
-            <h1 id="React插槽"><a href="#React插槽" class="headerlink" title="React插槽"></a>React插槽</h1><p>组件中写入内容，这些内容可以被识别和控制。React需要自己开发支持插槽功能。</p>
+          <h1 id="React插槽"><a href="#React插槽" class="headerlink" title="React插槽"></a>React插槽</h1><p>组件中写入内容，这些内容可以被识别和控制。React需要自己开发支持插槽功能。</p>
 <p>原理：<br>组件中写入的HTML，可以传入到props中。</p>
-<p>组件中的HTML内容可以直接全部插入。也可以，组件中根据HTML内容的不同，插入的位置不同。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import ReactDOM from &quot;react-dom&quot;;</span><br><span class="line"></span><br><span class="line">class ParentCom extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        console.log(this.props);</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;h1&gt;组件插槽&lt;&#x2F;h1&gt;</span><br><span class="line">                &#123;this.props.children&#125;</span><br><span class="line">                &lt;ChildCom&gt;</span><br><span class="line">                    &lt;h1 data-position&#x3D;&quot;header&quot;&gt;这是放置到头部的内容&lt;&#x2F;h1&gt;</span><br><span class="line">                    &lt;h1 data-position&#x3D;&quot;main&quot;&gt;这是放置到主要的内容&lt;&#x2F;h1&gt;</span><br><span class="line">                    &lt;h1 data-position&#x3D;&quot;footer&quot;&gt;这是放置到尾部的内容&lt;&#x2F;h1&gt;</span><br><span class="line">                &lt;&#x2F;ChildCom&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class ChildCom extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        let headerCom, mainCom, footerCom;</span><br><span class="line">        this.props.children.forEach((item, index) &#x3D;&gt; &#123;</span><br><span class="line">            if (item.props[&quot;data-position&quot;] &#x3D;&#x3D;&#x3D; &quot;header&quot;) &#123;</span><br><span class="line">                headerCom &#x3D; item;</span><br><span class="line">            &#125; else if (item.props[&quot;data-position&quot;] &#x3D;&#x3D;&#x3D; &quot;main&quot;) &#123;</span><br><span class="line">                mainCom &#x3D; item;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                footerCom &#x3D; item;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;div className&#x3D;&quot;header&quot;&gt;&#123;headerCom&#125;&lt;&#x2F;div&gt;</span><br><span class="line">                &lt;div className&#x3D;&quot;main&quot;&gt;&#123;mainCom&#125;&lt;&#x2F;div&gt;</span><br><span class="line">                &lt;div className&#x3D;&quot;footer&quot;&gt;&#123;footerCom&#125;&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class RootCom extends React.Component &#123;</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        &#x2F;&#x2F; console.log(props);</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            arr: [1, 2, 3],</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;ParentCom&gt;</span><br><span class="line">                &lt;h2 data-name&#x3D;&quot;a&quot; data-index&#x3D;&#123;this.state.arr[0]&#125;&gt;</span><br><span class="line">                    子组件1&lt;&#x2F;h2&gt;</span><br><span class="line">                &lt;h2 data-name&#x3D;&quot;b&quot; data-index&#x3D;&#123;this.state.arr[1]&#125;&gt;</span><br><span class="line">                    子组件2&lt;&#x2F;h2&gt;</span><br><span class="line">                &lt;h2 data-name&#x3D;&quot;c&quot; data-index&#x3D;&#123;this.state.arr[2]&#125;&gt;</span><br><span class="line">                    子组件3&lt;&#x2F;h2&gt;</span><br><span class="line">            &lt;&#x2F;ParentCom&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;RootCom&gt;&lt;&#x2F;RootCom&gt;, document.querySelector(&quot;#root&quot;));</span><br></pre></td></tr></table></figure>
-
-<h1 id="React路由"><a href="#React路由" class="headerlink" title="React路由"></a>React路由</h1><p>根据不同的路径，显示不同的组件（内容）；React使用的库react-router-dom;<br>安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install react-router-dom -save</span><br></pre></td></tr></table></figure>
-
-<p><strong>ReactRouter 三大组件</strong>：</p>
-<ul>
-<li>Router：所有路由组件的根组件（底层组件），包裹路由规则的最外层容器。<pre><code>属性：basename&gt;设置此路由根路径，router可以在一个组件中写多个。</code></pre></li>
-<li>Route：路由规则匹配组件，显示当前规则对应的组件。</li>
-<li>Link：路由跳转的组件。</li>
-</ul>
-<p>注意：如果要精确匹配，那么可以在route上设置exact属性。<br>使用案例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">&#x2F;&#x2F;hash模式</span><br><span class="line">&#x2F;&#x2F;import &#123;HashRouter as Router,Link,Route&#125; from &#39;react-router-dom&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;history模式&#x2F;后端配合使用</span><br><span class="line">import &#123; BrowserRouter as Router, Link, Route &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">function Home() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;admin首页&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Me() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;admin个人中心&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Product() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;admin产品页面&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class App extends React.Component&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;div&gt;所有页面都显示的普通内容&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;&quot; exact component&#x3D;&#123;()&#x3D;&gt;(&lt;div&gt;首页&lt;&#x2F;div&gt;)&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;me&quot; component&#x3D;&#123;()&#x3D;&gt;(&lt;div&gt;个人中心&lt;&#x2F;div&gt;)&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;product&quot; component&#x3D;&#123;()&#x3D;&gt;(&lt;div&gt;产品页面&lt;&#x2F;div&gt;)&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;&#x2F;Router&gt;</span><br><span class="line"></span><br><span class="line">        &lt;Router basename&#x3D;&quot;&#x2F;admin&quot;&gt;</span><br><span class="line">          &lt;div className&#x3D;&quot;nav&quot;&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;&quot;&gt;Home &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;product&quot;&gt;Product &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;me&quot;&gt;Me &lt;&#x2F;Link&gt;</span><br><span class="line">          &lt;&#x2F;div&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;&quot; exact component&#x3D;&#123;Home&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;product&quot; component&#x3D;&#123;Product&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;me&quot; component&#x3D;&#123;Me&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;&#x2F;Router&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default App;</span><br></pre></td></tr></table></figure>
-
-<p>Link组件可以设置to属性，来进行页面的跳转，to属性可以直接写路径的字符串，也可以通过1个对象进行路径的设置，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.Component&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    let meObj &#x3D; &#123;</span><br><span class="line">      pathname: &quot;&#x2F;me&quot;,&#x2F;&#x2F;跳转的路径</span><br><span class="line">      search: &quot;?username&#x3D;admin&quot;,&#x2F;&#x2F;get请求参数</span><br><span class="line">      hash: &quot;#abc&quot;,&#x2F;&#x2F;设置的HASH值</span><br><span class="line">      state: &#123; msg: &quot;helloworld&quot; &#125;,&#x2F;&#x2F;传入组件的数据</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">      &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">          &lt;div className&#x3D;&quot;nav&quot;&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;&quot;&gt;Home &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;product&quot;&gt;Product &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&#123; meObj &#125;&gt;Me &lt;&#x2F;Link&gt;</span><br><span class="line">          &lt;&#x2F;div&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;&quot; exact component&#x3D;&#123;Home&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;product&quot; component&#x3D;&#123;Product&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;me&quot; component&#x3D;&#123;Me&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;&#x2F;Router&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Link的replace属性：点击链接后，将新地址替换成历史访问记录的原地址。</p>
-<p>动态路由的实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">&#x2F;&#x2F;hash模式</span><br><span class="line">&#x2F;&#x2F;import &#123;HashRouter as Router,Link,Route&#125; from &#39;react-router-dom&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;history模式&#x2F;后端配合使用</span><br><span class="line">import &#123; BrowserRouter as Router, Link, Route &#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">function Home() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;admin首页&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Me(props) &#123;</span><br><span class="line">  console.log(props)</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;admin个人中心&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Product() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;admin产品页面&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function News(props) &#123;</span><br><span class="line">  console.log(props)</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      新闻页面，新闻id：&#123;props.match.params.id&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class App extends React.Component&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    let meObj &#x3D; &#123;</span><br><span class="line">      pathname: &quot;&#x2F;me&quot;,&#x2F;&#x2F;跳转的路径</span><br><span class="line">      search: &quot;?username&#x3D;admin&quot;,&#x2F;&#x2F;get请求参数</span><br><span class="line">      hash: &quot;#abc&quot;,&#x2F;&#x2F;设置的HASH值</span><br><span class="line">      state: &#123; msg: &quot;helloworld&quot; &#125;,&#x2F;&#x2F;传入组件的数据</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">      &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">          &lt;div className&#x3D;&quot;nav&quot;&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;&quot;&gt;Home &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;product&quot;&gt;Product &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&#123; meObj &#125; replace&gt;Me &lt;&#x2F;Link&gt;</span><br><span class="line">            &lt;Link to&#x3D;&quot;&#x2F;news&#x2F;456789&quot;&gt;News &lt;&#x2F;Link&gt;</span><br><span class="line">          &lt;&#x2F;div&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;&quot; exact component&#x3D;&#123;Home&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;product&quot; component&#x3D;&#123;Product&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;me&quot; component&#x3D;&#123;Me&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;news&#x2F;:id&quot; component&#x3D;&#123;News&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;&#x2F;Router&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default App;</span><br></pre></td></tr></table></figure>
-
-<p><strong><em>重定向组件</em></strong><br>如果访问某个组件时，如果有重定向组件，那么就会修改页面路径，是的页面的内容显示为所定向路径的内容。</p>
-<p>案例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">import React from &quot;react&quot;;</span><br><span class="line">import &#123;BrowserRouter as Router,Route,Link,Redirect&#125; from &#39;react-router-dom&#39;</span><br><span class="line"></span><br><span class="line">function LoginInfo(props) &#123;</span><br><span class="line">  &#x2F;&#x2F; props.loginState &#x3D; &#39;success&#39;;</span><br><span class="line">  &#x2F;&#x2F; props.loginState &#x3D; &#39;fail&#39;;</span><br><span class="line">  if (props.location.state.loginState &#x3D;&#x3D;&#x3D; &#39;success&#39;) &#123;</span><br><span class="line">    return &lt;Redirect to&#x3D;&quot;&#x2F;admin&quot;&gt;&lt;&#x2F;Redirect&gt;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return &lt;Redirect to&#x3D;&quot;&#x2F;login&quot;&gt;&lt;&#x2F;Redirect&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let FormCom &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">  let pathObj &#x3D; &#123;</span><br><span class="line">    pathname: &quot;&#x2F;logininfo&quot;,</span><br><span class="line">    state: &#123;</span><br><span class="line">      loginState: &#39;success&#39;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;表单验证&lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;Link to&#x3D;&#123;pathObj&#125;&gt;登陆验证页面&lt;&#x2F;Link&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class App extends React.Component&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;&quot; exact component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;首页&lt;&#x2F;h1&gt;&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;form&quot; exact component&#x3D;&#123;FormCom&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;login&quot; exact component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;登陆页&lt;&#x2F;h1&gt;&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;logininfo&quot; exact component&#x3D;&#123;LoginInfo&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">          &lt;Route path&#x3D;&quot;&#x2F;admin&quot; exact component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;admin页面，登陆成功&lt;&#x2F;h1&gt;&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">        &lt;&#x2F;Router&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default App;</span><br></pre></td></tr></table></figure>
-
-<p><strong><em>Switch组件</em></strong><br>让Switch组件内容的route只匹配1个，只要匹配到了，剩余的路由规则将不再匹配。</p>
-<p>案例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router&gt;</span><br><span class="line">  &lt;Switch&gt;</span><br><span class="line">    &lt;Route path&#x3D;&quot;&#x2F;&quot; exact component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;首页&lt;&#x2F;h1&gt;&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">    &lt;Route path&#x3D;&quot;&#x2F;form&quot; exact component&#x3D;&#123;FormCom&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">    &lt;Route</span><br><span class="line">      path&#x3D;&quot;&#x2F;login&quot;</span><br><span class="line">      exact</span><br><span class="line">      component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;登陆页&lt;&#x2F;h1&gt;&#125;</span><br><span class="line">    &gt;&lt;&#x2F;Route&gt;</span><br><span class="line">    &lt;Route path&#x3D;&quot;&#x2F;logininfo&quot; exact component&#x3D;&#123;LoginInfo&#125;&gt;&lt;&#x2F;Route&gt;</span><br><span class="line">    &lt;Route</span><br><span class="line">      path&#x3D;&quot;&#x2F;admin&quot;</span><br><span class="line">      exact</span><br><span class="line">      component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;admin页面，登陆成功&lt;&#x2F;h1&gt;&#125;</span><br><span class="line">    &gt;&lt;&#x2F;Route&gt;</span><br><span class="line">    &lt;Route</span><br><span class="line">      path&#x3D;&quot;&#x2F;abc&quot;</span><br><span class="line">      exact</span><br><span class="line">      component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;abc 1页面，登陆成功&lt;&#x2F;h1&gt;&#125;</span><br><span class="line">    &gt;&lt;&#x2F;Route&gt;</span><br><span class="line">    &lt;Route</span><br><span class="line">      path&#x3D;&quot;&#x2F;abc&quot;</span><br><span class="line">      exact</span><br><span class="line">      component&#x3D;&#123;() &#x3D;&gt; &lt;h1&gt;abc 2页面，登陆成功&lt;&#x2F;h1&gt;&#125;</span><br><span class="line">    &gt;&lt;&#x2F;Route&gt;</span><br><span class="line">  &lt;&#x2F;Switch&gt;</span><br><span class="line">&lt;&#x2F;Router&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h1><p>解决React数据管理（状态管理），用于中大型项目，数据比较庞大，组件之间数据交互多的情况下使用。如果你不知道是否需要使用Redux，那么你就不需要用它！</p>
-<ul>
-<li>解决组件的数据通信。</li>
-<li>解决数据和交互较多的应用。</li>
-</ul>
-<p>React只是一种状态管理的解决方案！</p>
-<p><strong><em>Store</em></strong>：数据仓库，保存数据的敌方。<br><strong><em>State</em></strong>：State是一个对象，数据仓库中的所有数据，都放到一个State里。<br><strong><em>Action</em></strong>：一个动作，触发数据改变的方法。<br><strong><em>Dispatch</em></strong>：将动作触发成方法。<br><strong><em>Reduce</em></strong>：是一个函数，通过获取动作，改变数据，生成一个新的状态State，从而改变页面。</p>
-<p>安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install redux -save</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>初始化数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const store &#x3D; createStore(reducer)</span><br><span class="line">reducer有两个作用：1、初始化数据；2、改变数据</span><br></pre></td></tr></table></figure></li>
-<li>获取数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let state &#x3D; store.getState()</span><br></pre></td></tr></table></figure></li>
-<li>修改数据（通过动作修改数据）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(&#123;type: &quot;add&quot;, content: &#123;id: 1, msg: &quot;helloworld&quot;&#125;&#125;)</span><br></pre></td></tr></table></figure></li>
-<li>修改视图(监听数据的变化，重新渲染内容)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">store.subscribe(()&#x3D;&gt;&#123;</span><br><span class="line">    ReactDOM.render(&lt;Counter &#x2F;&gt;, document.querySelector(&#39;#root&#39;))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h1 id="React-redux"><a href="#React-redux" class="headerlink" title="React-redux"></a>React-redux</h1><p>安装<br>npm install react-redux –save</p>
-<p>概念：<br>Provider组件：自动的将store里的state和组件进行关联。<br>MapStateProps：这个函数用于将store的state映射到组件的props里。<br>mapdispatchToProps：将store中的dispatch映射到组件的props里，实现了方法的共享。<br>Connect方法：将组件和数据（方法）进行连接。</p>
-<p>使用：<br>初始化数据<br>数据的获取<br>将state映射到数组里，将修改数据的方法映射到组件的props中。</p>
-
-          
+<p>组件中的HTML内容可以直接全部插入。也可以，组件中根据HTML内容的不同，插入的位置不同。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/React-Learning-day04/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1581,151 +1669,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://LittleFishinSea.github.io/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%875%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%A7%8B%E7%94%BB%E9%9D%A2%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%94%BB%E9%9D%A2%E7%9A%84%E5%88%86%E7%A6%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Q">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小屁屁的成长路程">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/%E9%A3%9E%E6%9C%BA%E5%A4%A7%E6%88%98%E4%BC%98%E5%8C%96%E7%BB%AD%E7%AF%875%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%B8%B8%E6%88%8F%E5%BC%80%E5%A7%8B%E7%94%BB%E9%9D%A2%E4%B8%8E%E8%BF%90%E8%A1%8C%E7%94%BB%E9%9D%A2%E7%9A%84%E5%88%86%E7%A6%BB/" itemprop="url">飞机大战优化续篇5：实现游戏开始画面与运行画面的分离</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-08T22:05:53+08:00">
-                2020-05-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E8%B7%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">网路技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>按照昨天的计划，今天开始探索“关卡制”的游戏模式，那么首当其冲的便是有一个WELCOME欢迎界面，通过点击【开始游戏】按钮，进入第一关的游戏，第一关游戏通过后（消灭BOSS），将在胜利画面提供进入下一关的按钮。<br>目前进展：<br>已实现WELCOME欢迎界面的设计、调试与测试，功能正常。<br>关键点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1：在主程序定义一个游戏状态的类（class GameState），在类里面按游戏的逻辑Stage进行Function设计，比如：def Welcome_screen、def First_Stage_main_game、def Scecond_Stage_main_game、def state_manager...</span><br><span class="line">2：主程序main()里面的原程序内容，除开clock外都移至def First_Stage_main_game中。</span><br><span class="line">3：主程序初始化部分，进行类实例化game_state &#x3D; GameState()</span><br><span class="line">4：主程序main()内，调用game_state实例对象的state_manager方法，来判断游戏目前所处Stage。</span><br><span class="line">5: state_manager方法中，主要根据类变量self.state的值的内容来判断，进入哪个Stage进行游戏执行。（默认状态&#x3D;‘Welcome_screen’）</span><br><span class="line">6: 在Welcome_screen方法中，通过捕捉鼠标是否点击【开始游戏】按钮的事件，来进入第一个Stage ---》 First_Stage_main_game</span><br><span class="line">7: 在First_Stage_main_game通关后，在胜利界面，点击【下一关】按钮，进入Second_Stage_main_game</span><br></pre></td></tr></table></figure>
-<p>注意事项：<br>1：状态类内的所有Function都要重新引入Clock事件，并在结束时刷新画面pygame.display.flip()，最开始在WELCOME画面没有刷新就导致了显示画面异常。<br>2：如果需要调用主程序初始化时定义的变量，需要使用全局变量模式。<br>3：delay类型的变量，需要放到主程序的初始化环境部分进行定义，否则在funcion内就相当于每帧都重新赋了初值，则不能实现延迟效果。</p>
-<p>下一步将尝试开发第二关卡内容，如果顺利实现，将架构重新优化，形成一个成熟的模板，可供关卡制游戏作为模板参考。<br>晚安。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1780,7 +1723,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
